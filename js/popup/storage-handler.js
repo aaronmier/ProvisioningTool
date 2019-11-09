@@ -21,6 +21,9 @@ port.onMessage.addListener(function(message){
     if(message.customer){
       $('#customer').val(message.customer);
     }
+    if(message.group){
+      $('#group').val(message.group);
+    }
     if(message.sow){
       $('#sow').val(message.sow);
     }
@@ -36,6 +39,9 @@ port.onMessage.addListener(function(message){
     if(message.sendToLName){
       $('#lName').val(message.sendToLName);
     }
+    if(message.phoneNumber){
+      $('#phoneNumber').val(message.phoneNumber);
+    }
     if(message.sendToEmail){
       $('#email').val(message.sendToEmail);
     }
@@ -44,6 +50,9 @@ port.onMessage.addListener(function(message){
     }
     if(message.city){
       $('#city').val(message.city);
+    }
+    if(message.st){
+      $('#st').val(message.st);
     }
     if(message.zip){
       $('#zip').val(message.zip);

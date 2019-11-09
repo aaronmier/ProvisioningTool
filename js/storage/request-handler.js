@@ -62,7 +62,6 @@ chrome.runtime.onConnect.addListener(function(port){
             saveData(message);
             break;
             case 'getTicketInfo':
-            console.log(message.ticket)
               if(message.ticket.length == 7){
                 ticketUrl = 'https://support3.telesphere.com/admin.php?pg=request&reqid=' + message.ticket
                 $.ajax({
