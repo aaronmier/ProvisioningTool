@@ -82,7 +82,24 @@ $("#assignTo").change(function () {
   console.log($("#assignTo").val())
    });
 $("#copyTracking").click(function () {
-  console.log('tracking clicked');
+ copyText = document.createElement("textarea");
+ copyText.value = 'Fedex.com/' + $("#trackingNum").val()
+ copyText.style.position = 'fixed';
+ copyText.style.top = 0;
+ copyText.style.left = 0;
+ copyText.style.width = '2em';
+ copyText.style.height = '2em';
+ copyText.style.padding = 0;
+ copyText.style.border = 'none';
+ copyText.style.outline = 'none';
+ copyText.style.boxShadow = 'none';
+ copyText.style.background = 'transparent';
+ document.body.appendChild(copyText);
+ copyText.focus();
+ copyText.select();
+ document.execCommand('copy');
+ document.body.removeChild(copyText);
+ console.log('tracking clicked');
   });
   $("#clear-tools-Btn").click(function () {
     $("#trackingNum").val('')
