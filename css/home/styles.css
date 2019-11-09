@@ -1,0 +1,50 @@
+.container {
+  background-color: rgb(245, 245, 245);
+}
+#logo{
+  height:35%;
+  width:35%;
+}
+body{
+  background-color: #666666;
+  height: 100vh;
+}
+
+input::placeholder{
+  text-align: center;
+}
+input{
+  padding: 5px;
+}
+.alerts{
+  color: red;
+}
+.theicons{
+    border-radius: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:100%;
+    width:15%;
+    cursor: pointer;
+}
+#sugar-icon{
+  background-image: url('/../img/sugar.png');
+
+}
+#sugar-icon:hover{
+  background-image: url('/../img/sugar_hover.png');
+
+}
+#palladion-icon{
+background-image: url('/../img/palladion.png');
+}
+#palladion-icon:hover{
+background-image: url('/../img/palladion_hover.png');
+}
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 100%;
+}

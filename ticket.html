@@ -1,0 +1,3047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>&#x24E9; Ticket - 1135612 - 906152</title>
+
+	<script type="text/javascript" src="/js/Zeus/vendor.js"></script>
+	<script type="text/javascript" src="/htdocs/js/datatables-bootstrap3.min.js"></script>
+
+			<script type="text/javascript" src="/js/common.js"></script>
+		<script type="text/javascript" src="/js/Zeus/default.js"></script>
+
+	<script type="text/javascript" src="/js/Zeus/app.js"></script>
+	<script type="text/javascript" src="/js/Zeus/ga.js"></script>
+
+
+
+	<link rel="stylesheet" type="text/css" href="/htdocs/libs/datatables.net-bs/css/dataTables.bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/htdocs/libs/datatables.net-select-bs/css/select.bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/htdocs/libs/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/htdocs/libs/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/htdocs/icomoon-1.0/style.css"/>
+
+	<link rel="stylesheet" type="text/css" href="/css/Zeus/style.css"/>
+
+			<link href="/js/chosen_v1.1.0/chosen-bootstrap.css" rel="stylesheet" type="text/css"/>
+			<script type="text/javascript" src="/js/chosen_v1.1.0/chosen.jquery.min.js"></script>
+
+		<script type="text/javascript"
+		        src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['timeline','table','corechart','line','geochart']}]}"></script>
+
+	</head>
+<body class="body">
+<input type="hidden" id="zeus_access_level" value="1"/>
+<input type="hidden" id="max_input_vars" value="5000"/>
+
+<nav id="header_nav" class="navbar navbar-fixed-top" role="navigation">
+	<ul id="header_list" class="nav nav-sm nav-pills">
+									<li class="dropdown ">
+			<a class="btn " id="dd-Search" data-toggle="dropdown" href="#"
+			   title="Search">
+				<span id="notification-search" class="notification-icon">
+											<i class="glyphicon  glyphicon-search " ></i>
+															<span class="hidden-md hidden-sm hidden-xs">Search</span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-Search">
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/search/"
+						   >
+							<span id="notification-customer" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-building-o fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-search fa-fw" ></i></span>&nbsp;
+																																	Customer
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/circuit/search/"
+						   >
+							<span id="notification-circuit" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="glyphicon fa-stack-1x glyphicon-flash fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-search fa-fw" ></i></span>&nbsp;
+																																	Circuit
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/searchContacts/"
+						   >
+							<span id="notification-contact" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-user fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-search fa-fw" ></i></span>&nbsp;
+																																	Contact
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/contract/search/"
+						   >
+							<span id="notification-contract" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-files-o fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-search fa-fw" ></i></span>&nbsp;
+																																	Contract
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/device/search/"
+						   >
+							<span id="notification-device" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="icon fa-stack-1x icon-server-alt fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-search fa-fw" ></i></span>&nbsp;
+																																	Device
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/dispatch/search"
+						   >
+							<span id="notification-dispatch" class="notification-icon">
+																	<i class="fa  fa-truck fa-fw" ></i>&nbsp;
+																																	Dispatch
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/ip/search/"
+						   >
+							<span id="notification-ip" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="icon fa-stack-1x icon-ip fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-search fa-fw" ></i></span>&nbsp;
+																																	IP
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/inventory/search/"
+						   >
+							<span id="notification-inventory" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-barcode fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-search fa-fw" ></i></span>&nbsp;
+																																	Inventory
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/tn/search/"
+						   >
+							<span id="notification-number" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-slack fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-search fa-fw" ></i></span>&nbsp;
+																																	Number
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/project/search/"
+						   >
+							<span id="notification-project" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-tasks fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-search fa-fw" ></i></span>&nbsp;
+																																	Project
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/ticket/search/"
+						   >
+							<span id="notification-ticket" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-tags fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-search fa-fw" ></i></span>&nbsp;
+																																	Ticket
+																							</span>
+
+						</a>
+																</li>
+							</ul>
+		</li>
+				<li class="dropdown ">
+			<a class="btn " id="dd-Admin" data-toggle="dropdown" href="#"
+			   title="Admin">
+				<span id="notification-admin" class="notification-icon">
+											<i class="fa  fa-archive " ></i>
+															<span class="hidden-md hidden-sm hidden-xs">Admin</span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-Admin">
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="#"
+						   >
+							<span id="notification-c3-admin" class="notification-icon">
+																	<i class='fa fa-fw ' >C3</i>&nbsp;
+																																	C3 Admin
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/c3Admin/servicePacks/">
+												<span id="notification-service-packs" class="notification-icon">
+																											<i class="fa  fa-cogs fa-fw" ></i>&nbsp;
+																																																					Service Packs
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/admin/dev/"
+						   >
+							<span id="notification-dev" class="notification-icon">
+																	<i class="fa  fa-rebel text-danger fa-fw" ></i>&nbsp;
+																																	Dev
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/admin/resetBroadworksPasswordRules">
+												<span id="notification-reset-broadworks-password-rules" class="notification-icon">
+																											<i class="fa  fa-key fa-fw" ></i>&nbsp;
+																																																					Reset Broadworks Password Rules
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/admin/syncCustomer/">
+												<span id="notification-sync-customer-to-zeus" class="notification-icon">
+																											<i class="fa  fa-exchange fa-fw" ></i>&nbsp;
+																																																					Sync Customer to Zeus
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/SalesForceBrowser/">
+												<span id="notification-salesforce-browser" class="notification-icon">
+																											<i class="fa  fa-cloud fa-fw" ></i>&nbsp;
+																																																					Salesforce Browser
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/device/admin/"
+						   >
+							<span id="notification-devices" class="notification-icon">
+																	<i class="icon  icon-server-alt fa-fw" ></i>&nbsp;
+																																	Devices
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/device/bulkNotes/">
+												<span id="notification-bulk-change-notes" class="notification-icon">
+																											<i class="glyphicon  glyphicon-comment fa-fw" ></i>&nbsp;
+																																																					Bulk Change Notes
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/device/listSNMP/">
+												<span id="notification-snmp" class="notification-icon">
+																											<i class="fa  fa-smile-o fa-fw" ></i>&nbsp;
+																																																					SNMP
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/device/listDeviceTemplates/">
+												<span id="notification-templates" class="notification-icon">
+																											<i class="fa  fa-certificate fa-fw" ></i>&nbsp;
+																																																					Templates
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/device/listDeviceTypes/">
+												<span id="notification-types" class="notification-icon">
+																											<i class="fa  fa-certificate fa-fw" ></i>&nbsp;
+																																																					Types
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="#"
+						   >
+							<span id="notification-engineering" class="notification-icon">
+																	<i class="fa  fa-cog fa-fw" ></i>&nbsp;
+																																	Engineering
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/dns/listAll/">
+												<span id="notification-bulk-dns-update" class="notification-icon">
+																											<i class="icon  icon-cloud-transfer fa-fw" ></i>&nbsp;
+																																																					Bulk DNS Update
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/carrier/listAll/">
+												<span id="notification-carriers" class="notification-icon">
+																											<i class="fa  fa-signal fa-fw" ></i>&nbsp;
+																																																					Carriers
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/carrier/listPops/">
+												<span id="notification-pops" class="notification-icon">
+																											<i class="fa  fa-puzzle-piece fa-fw" ></i>&nbsp;
+																																																					POPs
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/dns/viewEmergencySRVVersions">
+												<span id="notification-srv-versions" class="notification-icon">
+																											<i class="icon  icon-cloud-transfer fa-fw" ></i>&nbsp;
+																																																					SRV Versions
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="#"
+						   >
+							<span id="notification-email-notification-tool/logs" class="notification-icon">
+																	<i class="fa  fa-envelope fa-fw" ></i>&nbsp;
+																																	Email Notification Tool/Logs
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/customerNotifications/customerNotify/">
+												<span id="notification-customer-email-notification-tool" class="notification-icon">
+																											<i class="fa  fa-envelope fa-fw" ></i>&nbsp;
+																																																					Customer Email Notification Tool
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/notificationLog/view/">
+												<span id="notification-email-notification-logs" class="notification-icon">
+																											<i class="fa  fa-list-ul fa-fw" ></i>&nbsp;
+																																																					Email Notification Logs
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/visualEmailQueue/view/">
+												<span id="notification-visual-email-queue" class="notification-icon">
+																											<i class="fa  fa-inbox fa-fw" ></i>&nbsp;
+																																																					Visual Email Queue
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="#"
+						   >
+							<span id="notification-inventory" class="notification-icon">
+																	<i class="fa  fa-barcode fa-fw" ></i>&nbsp;
+																																	Inventory
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/inventory/netxMapping/">
+												<span id="notification-netx-mapping" class="notification-icon">
+																											<i class="fa  fa-sitemap fa-fw" ></i>&nbsp;
+																																																					NetX Mapping
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/inventory/partsListMapping/">
+												<span id="notification-parts-list-mappings" class="notification-icon">
+																											<i class="fa  fa-truck fa-fw" ></i>&nbsp;
+																																																					Parts List Mappings
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/inventory/uploadNetxReport/">
+												<span id="notification-upload-netx-report" class="notification-icon">
+																											<i class="glyphicon  glyphicon-import fa-flip-horizontal fa-fw" ></i>&nbsp;
+																																																					Upload Netx Report
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/nexmo"
+						   >
+							<span id="notification-nexmo-&-gdm" class="notification-icon">
+																	<i class="fa  fa-comment fa-fw" ></i>&nbsp;
+																																	Nexmo & GDM
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/premierCentral/manageNumbers">
+												<span id="notification-manage-premier-central-numbers" class="notification-icon">
+																											<i class="fa  fa-slack fa-fw" ></i>&nbsp;
+																																																					Manage Premier Central Numbers
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="#"
+						   >
+							<span id="notification-noc" class="notification-icon">
+																	<i class="icon  icon-www fa-fw" ></i>&nbsp;
+																																	NOC
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/messageBoard">
+												<span id="notification-message-board" class="notification-icon">
+																											<i class="fa  fa-clipboard fa-fw" ></i>&nbsp;
+																																																					Message Board
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="#"
+						   >
+							<span id="notification-ip-management" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="icon fa-stack-1x icon-ip fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-search fa-fw" ></i></span>&nbsp;
+																																	IP Management
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/ipTypeManagement/viewNetwork/">
+												<span id="notification-type-management---network" class="notification-icon">
+																											<i class="icon  icon-www fa-fw" ></i>&nbsp;
+																																																					Type Management - Network
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/ipTypeManagement/viewCustomerIP/">
+												<span id="notification-type-management---customer-ip" class="notification-icon">
+																											<i class="fa  fa-user fa-fw" ></i>&nbsp;
+																																																					Type Management - Customer IP
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/ipManagement/viewNetworkBlock/">
+												<span id="notification-network-block-management" class="notification-icon">
+																											<i class="fa  fa-cube fa-fw" ></i>&nbsp;
+																																																					Network Block Management
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/tn/admin/"
+						   >
+							<span id="notification-numbers" class="notification-icon">
+																	<i class="fa  fa-slack fa-fw" ></i>&nbsp;
+																																	Numbers
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/tn/import/customer_id:9996">
+												<span id="notification-inventory-import" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-slack fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-import fa-flip-horizontal fa-fw" ></i></span>&nbsp;
+																																																					Inventory Import
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/tn/nnacl/">
+												<span id="notification-nnacl" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-slack fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-database fa-fw" ></i></span>&nbsp;
+																																																					NNACL
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/tn/pseudoList/">
+												<span id="notification-pseudo-npa/nxxs" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-slack fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-suitcase fa-fw" ></i></span>&nbsp;
+																																																					Pseudo NPA/NXXs
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/sales/tools"
+						   >
+							<span id="notification-sales-tools" class="notification-icon">
+																	<i class="fa  fa-male fa-fw" ></i>&nbsp;
+																																	Sales Tools
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/eicb/create/">
+												<span id="notification-create-external-eicb-quote" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-list-ul fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-fax fa-fw" ></i></span>&nbsp;
+																																																					Create External EICB Quote
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/sales/pcat/">
+												<span id="notification-pcat" class="notification-icon">
+																											<i class="fa  fa-shopping-cart fa-fw" ></i>&nbsp;
+																																																					PCAT
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="https://zeus.telesphere.com/tn/portCheckMulti/">
+												<span id="notification-portability-search" class="notification-icon">
+																											<i class="fa  fa-anchor fa-fw" ></i>&nbsp;
+																																																					Portability Search
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/sales/quota/">
+												<span id="notification-quota" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-signal fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-pencil fa-fw" ></i></span>&nbsp;
+																																																					Quota
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/serviceDelivery/menu/"
+						   >
+							<span id="notification-service-delivery" class="notification-icon">
+																	<i class="fa  fa-list-alt fa-fw" ></i>&nbsp;
+																																	Service Delivery
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/dispatch/dispatchAdmin/">
+												<span id="notification-dispatch" class="notification-icon">
+																											<i class="fa  fa-building-o fa-fw" ></i>&nbsp;
+																																																					Dispatch
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/serviceDelivery/listProjectCancelReasons/">
+												<span id="notification-edit-project-cancel-reasons" class="notification-icon">
+																											<i class="fa  fa-wrench fa-fw" ></i>&nbsp;
+																																																					Edit Project Cancel Reasons
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/serviceDelivery/manageReasonCode/group_id:1">
+												<span id="notification-edit-project-jeop-reasons" class="notification-icon">
+																											<i class="fa  fa-wrench fa-fw" ></i>&nbsp;
+																																																					Edit Project Jeop Reasons
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/serviceDelivery/listProjectTemplates">
+												<span id="notification-edit-project-templates" class="notification-icon">
+																											<i class="fa  fa-wrench fa-fw" ></i>&nbsp;
+																																																					Edit Project Templates
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/serviceDelivery/editSowTemplate">
+												<span id="notification-edit-sow-template" class="notification-icon">
+																											<i class="fa  fa-wrench fa-fw" ></i>&nbsp;
+																																																					Edit SOW Template
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/serviceDelivery/listSystemTasks">
+												<span id="notification-edit-system-tasks" class="notification-icon">
+																											<i class="fa  fa-wrench fa-fw" ></i>&nbsp;
+																																																					Edit System Tasks
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/serviceDelivery/c3Calendar/">
+												<span id="notification-manage-c3-calendars" class="notification-icon">
+																											<i class="fa  fa-calendar fa-fw" ></i>&nbsp;
+																																																					Manage C3 Calendars
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/serviceDelivery/manageCalendarType/">
+												<span id="notification-manage-c3-calendar-types" class="notification-icon">
+																											<i class="fa  fa-caret-square-o-down fa-fw" ></i>&nbsp;
+																																																					Manage C3 Calendar Types
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/serviceDelivery/projectType/">
+												<span id="notification-manage-project-types" class="notification-icon">
+																											<i class="fa  fa-th fa-fw" ></i>&nbsp;
+																																																					Manage Project Types
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/serviceDelivery/workQueues/">
+												<span id="notification-manage-work-queues" class="notification-icon">
+																											<i class="fa  fa-list-ul fa-fw" ></i>&nbsp;
+																																																					Manage Work Queues
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="#"
+						   >
+							<span id="notification-user" class="notification-icon">
+																	<i class="fa  fa-user fa-fw" ></i>&nbsp;
+																																	User
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/admin/manageUsers/">
+												<span id="notification-manage-users" class="notification-icon">
+																											<i class="fa  fa-group fa-fw" ></i>&nbsp;
+																																																					Manage Users
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/user/userLocation/">
+												<span id="notification-manage-user-locations" class="notification-icon">
+																											<i class="fa  fa-map-marker fa-fw" ></i>&nbsp;
+																																																					Manage User Locations
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="#"
+						   >
+							<span id="notification-zeus-admin" class="notification-icon">
+																	<i class='fa fa-fw ' >ⓩ</i>&nbsp;
+																																	Zeus Admin
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/menu/manage/">
+												<span id="notification-zeus-menu-management" class="notification-icon">
+																											<i class="fa  fa-sitemap fa-rotate-270 fa-fw" ></i>&nbsp;
+																																																					Zeus Menu Management
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+							</ul>
+		</li>
+				<li class="dropdown ">
+			<a class="btn " id="dd-Reports" data-toggle="dropdown" href="#"
+			   title="Reports">
+				<span id="notification-reports" class="notification-icon">
+											<i class="fa  fa-print " ></i>
+															<span class="hidden-md hidden-sm hidden-xs">Reports</span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-Reports">
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/accounting/reports/"
+						   >
+							<span id="notification-accounting" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-book fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Accounting
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/reports/aging/">
+												<span id="notification-aging" class="notification-icon">
+																											<i class="fa  fa-align-left fa-fw" ></i>&nbsp;
+																																																					Aging
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/allInstallsByRep">
+												<span id="notification-all-installs-by-rep" class="notification-icon">
+																											<i class="fa  fa-sign-in fa-fw" ></i>&nbsp;
+																																																					All Installs By Rep
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/allSalesByProduct/">
+												<span id="notification-all-sales-by-product" class="notification-icon">
+																											<i class="fa  fa-shopping-cart fa-fw" ></i>&nbsp;
+																																																					All Sales By Product
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/allSalesByRep/">
+												<span id="notification-all-sales-by-rep" class="notification-icon">
+																											<i class="fa  fa-male fa-fw" ></i>&nbsp;
+																																																					All Sales By Rep
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/assetTaxReport/">
+												<span id="notification-asset-tax-report" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-barcode fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					Asset Tax Report
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/cancels/">
+												<span id="notification-cancelled-before-billing" class="notification-icon">
+																											<i class="fa  fa-ban text-danger fa-fw" ></i>&nbsp;
+																																																					Cancelled Before Billing
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/renewedContracts/">
+												<span id="notification-contract-renewals" class="notification-icon">
+																											<i class="fa  fa-refresh fa-fw" ></i>&nbsp;
+																																																					Contract Renewals
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/contractStageByMonth/">
+												<span id="notification-contract-stage-by-month" class="notification-icon">
+																											<i class="fa  fa-files-o fa-fw" ></i>&nbsp;
+																																																					Contract Stage By Month
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/contractStageByMonthChart/">
+												<span id="notification-contract-stage-by-month-chart" class="notification-icon">
+																											<i class="fa  fa-bar-chart-o fa-fw" ></i>&nbsp;
+																																																					Contract Stage By Month Chart
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/faxmail/">
+												<span id="notification-faxmail-cdr" class="notification-icon">
+																											<i class="fa  fa-fax fa-fw" ></i>&nbsp;
+																																																					FaxMail CDR
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/salesBackdateReport/">
+												<span id="notification-gm-approved-to-sales-month-diff" class="notification-icon">
+																											<i class="fa  fa-arrow-left fa-fw" ></i>&nbsp;
+																																																					GM Approved to Sales Month Diff
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/positiveAfterNegative">
+												<span id="notification-positive-after-negative" class="notification-icon">
+																											<i class="fa  fa-files-o fa-fw" ></i>&nbsp;
+																																																					Positive After Negative
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/productDiscountOverview/">
+												<span id="notification-product-discount-overview" class="notification-icon">
+																											<i class="fa  fa-plus fa-fw" ></i>&nbsp;
+																																																					Product Discount Overview
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/productDiscounts/">
+												<span id="notification-product-discounts" class="notification-icon">
+																											<i class="fa  fa-shopping-cart fa-fw" ></i>&nbsp;
+																																																					Product Discounts
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/bod/">
+												<span id="notification-revenue-detail-(bod)" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-calendar fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					Revenue Detail (BOD)
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/salesCommission/">
+												<span id="notification-commissions" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-male fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					Commissions
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/zeusToEngage">
+												<span id="notification-zeus-to-engage" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-book fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					Zeus to Engage
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/circuit/reports/"
+						   >
+							<span id="notification-circuits" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="glyphicon fa-stack-1x glyphicon-flash fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Circuits
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/circuit/reportCircuitCost/">
+												<span id="notification-circuit-cost" class="notification-icon">
+																											<i class="fa  fa-money fa-fw" ></i>&nbsp;
+																																																					Circuit Cost
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/circuitQuotes/">
+												<span id="notification-circuit-quote-tool-usage" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="glyphicon fa-stack-1x glyphicon-flash fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					Circuit Quote Tool Usage
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/circuit/reportInactive/">
+												<span id="notification-inactive-customers" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-building-o fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-ban fa-fw" ></i></span>&nbsp;
+																																																					Inactive Customers
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/circuit/reportHidden/">
+												<span id="notification-hidden" class="notification-icon">
+																											<i class="fa  fa-eye-slash fa-fw" ></i>&nbsp;
+																																																					Hidden
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/circuit/reportNoContract/">
+												<span id="notification-missing-contracts" class="notification-icon">
+																											<i class="fa  fa-times fa-fw" ></i>&nbsp;
+																																																					Missing Contracts
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/circuit/reportNoZloc/">
+												<span id="notification-no-zloc" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class='fa fa-fw fa-stack-1x' >Z</i><i class="fa text-muted fa-stack-corner-se fa-circle-o fa-fw" ></i></span>&nbsp;
+																																																					No ZLoc
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/circuit/reportOverdue/">
+												<span id="notification-overdue" class="notification-icon">
+																											<i class="fa  fa-fire-extinguisher fa-fw" ></i>&nbsp;
+																																																					Overdue
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/circuit/reportPendingDISCO/">
+												<span id="notification-pending-disco" class="notification-icon">
+																											<i class="fa  fa-unlink fa-fw" ></i>&nbsp;
+																																																					Pending DISCO
+																									</span>
+											</a>
+										</li>
+																																				<li class="divider">
+																																						<li class="">
+											<a href="/circuit/reportDS3/">
+												<span id="notification-ds3-report" class="notification-icon">
+																											<i class="fa  fa-sitemap fa-fw" ></i>&nbsp;
+																																																					DS3 Report
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/circuit/reportByCarrier/">
+												<span id="notification-report-by-carrier" class="notification-icon">
+																											<i class="fa  fa-signal fa-fw" ></i>&nbsp;
+																																																					Report By Carrier
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/circuit/reportByType/">
+												<span id="notification-report-by-type" class="notification-icon">
+																											<i class="fa  fa-caret-square-o-down fa-fw" ></i>&nbsp;
+																																																					Report By Type
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/reports/"
+						   >
+							<span id="notification-customers" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-building-o fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Customers
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/reports/activeCustomers/">
+												<span id="notification-active-customer-contacts" class="notification-icon">
+																											<i class="fa  fa-user fa-fw" ></i>&nbsp;
+																																																					Active Customer Contacts
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/customersOpen24x7/">
+												<span id="notification-active-customers-open-24x7" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-building-o fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-time fa-fw" ></i></span>&nbsp;
+																																																					Active Customers Open 24x7
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/agentTotalRevenue/">
+												<span id="notification-agent-customers-and-revenue" class="notification-icon">
+																											<i class="fa  fa-male fa-fw" ></i>&nbsp;
+																																																					Agent Customers and Revenue
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/customerAgentReport/">
+												<span id="notification-all-customers-with-agent" class="notification-icon">
+																											<i class="fa  fa-male fa-fw" ></i>&nbsp;
+																																																					All Customers with Agent
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/customer/reportPostalCodes/">
+												<span id="notification-postal-code-summary" class="notification-icon">
+																											<i class="fa  fa-map-marker fa-fw" ></i>&nbsp;
+																																																					Postal Code Summary
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/customerRankingReport/">
+												<span id="notification-revenue-ranking" class="notification-icon">
+																											<i class="fa  fa-bar-chart-o fa-fw" ></i>&nbsp;
+																																																					Revenue Ranking
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/customerSeats/">
+												<span id="notification-seat-count-report" class="notification-icon">
+																											<i class="fa  fa-phone fa-fw" ></i>&nbsp;
+																																																					Seat Count Report
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/reportVIP/">
+												<span id="notification-vip-customer-list" class="notification-icon">
+																											<i class="glyphicon  glyphicon-fire text-danger fa-fw" ></i>&nbsp;
+																																																					VIP Customer List
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/customerProductContacts/">
+												<span id="notification-customer-product-contact-report" class="notification-icon">
+																											<i class="fa  fa-male fa-fw" ></i>&nbsp;
+																																																					Customer Product Contact Report
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/device/reports/"
+						   >
+							<span id="notification-devices" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="icon fa-stack-1x icon-server-alt fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Devices
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/device/reportAll/">
+												<span id="notification-all-devices" class="notification-icon">
+																											<i class="icon  icon-server-alt fa-fw" ></i>&nbsp;
+																																																					All Devices
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/device/reportInstalling/">
+												<span id="notification-installing" class="notification-icon">
+																											<i class="fa  fa-sign-in fa-fw" ></i>&nbsp;
+																																																					Installing
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/engineering/reports/"
+						   >
+							<span id="notification-engineering" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="icon fa-stack-1x icon-server-alt fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Engineering
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/reports/pop/">
+												<span id="notification-master-pop-list" class="notification-icon">
+																											<i class="fa  fa-puzzle-piece fa-fw" ></i>&nbsp;
+																																																					Master POP List
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/finance/reports/"
+						   >
+							<span id="notification-finance" class="notification-icon">
+																	<i class="fa  fa-money fa-fw" ></i>&nbsp;
+																																	Finance
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/reports/netXReport/">
+												<span id="notification-netx-report" class="notification-icon">
+																											<i class="fa  fa-building fa-fw" ></i>&nbsp;
+																																																					NetX Report
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/inventory/reports/"
+						   >
+							<span id="notification-inventory" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-barcode fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Inventory
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/inventory/reportInactive/csv:1">
+												<span id="notification-inactive-customers" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-building-o fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-ban fa-fw" ></i></span>&nbsp;
+																																																					Inactive Customers
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/inventory/historyByCustomerWithFilter/">
+												<span id="notification-inventory-history" class="notification-icon">
+																											<i class="fa  fa-history fa-fw" ></i>&nbsp;
+																																																					Inventory History
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/ip/reports/"
+						   >
+							<span id="notification-ips" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="icon fa-stack-1x icon-ip fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	IPs
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/ip/reportInactive">
+												<span id="notification-inactive-customers" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-building-o fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-ban fa-fw" ></i></span>&nbsp;
+																																																					Inactive Customers
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/monitoring/reports/"
+						   >
+							<span id="notification-monitoring" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-bar-chart-o fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Monitoring
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/monitoring/reportAlerts/">
+												<span id="notification-alerts" class="notification-icon">
+																											<i class="fa  fa-bell-o fa-fw" ></i>&nbsp;
+																																																					Alerts
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/monitoring/reportBWAuditLogs/">
+												<span id="notification-broadworks-audit-logs" class="notification-icon">
+																											<i class="fa  fa-file-text fa-fw" ></i>&nbsp;
+																																																					BroadWorks Audit Logs
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/tn/reports/"
+						   >
+							<span id="notification-numbers" class="notification-icon">
+																	<i class="fa  fa-slack fa-fw" ></i>&nbsp;
+																																	Numbers
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/tn/reportAll/">
+												<span id="notification-all-tn-report" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-slack fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					All TN Report
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/tn/internationalDIDReport">
+												<span id="notification-international-did-report" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-slack fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-import fa-flip-horizontal fa-fw" ></i></span>&nbsp;
+																																																					International DID Report
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/operationsReports/menu/"
+						   >
+							<span id="notification-operations" class="notification-icon">
+																	<i class="fa  fa-cogs fa-fw" ></i>&nbsp;
+																																	Operations
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/operationsReports/backlogChart/">
+												<span id="notification-backlog-chart" class="notification-icon">
+																											<i class="fa  fa-pie-chart fa-fw" ></i>&nbsp;
+																																																					Backlog Chart
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/operationsReports/backlog/">
+												<span id="notification-backlog-report" class="notification-icon">
+																											<i class="fa  fa-print fa-fw" ></i>&nbsp;
+																																																					Backlog Report
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/project/reports/"
+						   >
+							<span id="notification-service-delivery" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-tasks fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Service Delivery
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/dispatch/report">
+												<span id="notification-dispatches" class="notification-icon">
+																											<i class="fa  fa-truck fa-fw" ></i>&nbsp;
+																																																					Dispatches
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/project/reportHandoffs/">
+												<span id="notification-handoffs" class="notification-icon">
+																											<i class="fa  fa-hand-o-right fa-fw" ></i>&nbsp;
+																																																					Handoffs
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/project/reportInFlightProducts/">
+												<span id="notification-in-flight-products" class="notification-icon">
+																											<i class="fa  fa-plane fa-fw" ></i>&nbsp;
+																																																					In Flight Products
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/pmProjectCountDashboard">
+												<span id="notification-pm-project-count-dashboard" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-tasks fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					PM Project Count Dashboard
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/project/listByInstallInProgress/">
+												<span id="notification-projects:-100%-&-install-in-prog" class="notification-icon">
+																											<i class="fa  fa-pie-chart fa-fw" ></i>&nbsp;
+																																																					Projects: 100% & Install In Prog
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/serviceDelivery/viewInstallationCalendar/">
+												<span id="notification-installation-calendar" class="notification-icon">
+																											<i class="fa  fa-calendar fa-fw" ></i>&nbsp;
+																																																					Installation Calendar
+																									</span>
+											</a>
+										</li>
+																																				<li class="divider">
+																																						<li class="">
+											<a href="/reports/dueDate">
+												<span id="notification-jeops" class="notification-icon">
+																											<i class="fa  fa-flag-checkered fa-fw" ></i>&nbsp;
+																																																					Jeops
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/project/reportORAPPendingData">
+												<span id="notification-o'reilly-pending-data" class="notification-icon">
+																											<i class="fa  fa-car fa-fw" ></i>&nbsp;
+																																																					O'Reilly Pending Data
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/recon/reports/"
+						   >
+							<span id="notification-reconciliation" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-bullseye fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Reconciliation
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/recon/exceptionReport/">
+												<span id="notification-daily-recon-exception-report" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-bullseye fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					Daily Recon Exception Report
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/recon/operations/">
+												<span id="notification-operation-recon-overview" class="notification-icon">
+																											<i class="fa  fa-cogs fa-fw" ></i>&nbsp;
+																																																					Operation Recon Overview
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/recon/exceptionAgingGraph/">
+												<span id="notification-recon-exception-aging-graph" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-bullseye fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					Recon Exception Aging Graph
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/sales/reports/"
+						   >
+							<span id="notification-sales" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-male fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Sales
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/reports/etlReport/">
+												<span id="notification-etl-contract-summary" class="notification-icon">
+																											<i class="fa  fa-files-o fa-fw" ></i>&nbsp;
+																																																					ETL Contract Summary
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/circuit/reportICB/">
+												<span id="notification-icb" class="notification-icon">
+																											<i class="fa  fa-briefcase fa-fw" ></i>&nbsp;
+																																																					ICB
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/soldProducts/">
+												<span id="notification-monthly-product-sales" class="notification-icon">
+																											<i class="fa  fa-calendar fa-fw" ></i>&nbsp;
+																																																					Monthly Product Sales
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/salesByRep/">
+												<span id="notification-positive-sales-by-rep" class="notification-icon">
+																											<i class="fa  fa-male fa-fw" ></i>&nbsp;
+																																																					Positive Sales By Rep
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/salesByState/">
+												<span id="notification-positive-sales-by-state" class="notification-icon">
+																											<i class="fa  fa-map-marker fa-fw" ></i>&nbsp;
+																																																					Positive Sales By State
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/salesByTeam/">
+												<span id="notification-positive-sales-by-team" class="notification-icon">
+																											<i class="fa  fa-group fa-fw" ></i>&nbsp;
+																																																					Positive Sales By Team
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/renewals/">
+												<span id="notification-renewals" class="notification-icon">
+																											<i class="fa  fa-refresh fa-fw" ></i>&nbsp;
+																																																					Renewals
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/renewalsByRep">
+												<span id="notification-renewals-by-rep" class="notification-icon">
+																											<i class="fa  fa-refresh fa-fw" ></i>&nbsp;
+																																																					Renewals by Rep
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/salesEditAudit/">
+												<span id="notification-sale-order-changes" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-file-text fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					Sale Order Changes
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/salesReports/contractsByMonthAndRevenueType/">
+												<span id="notification-sales-by-revenue-type-data" class="notification-icon">
+																											<i class="fa  fa-files-o fa-fw" ></i>&nbsp;
+																																																					Sales By Revenue Type Data
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/soldProductDetails/">
+												<span id="notification-sold-product-details" class="notification-icon">
+																											<i class="fa  fa-line-chart fa-fw" ></i>&nbsp;
+																																																					Sold Product Details
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/reports/sales/">
+												<span id="notification-sales-report" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-male fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					Sales Report
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/salesReports/trendsByMonth/">
+												<span id="notification-trends-chart" class="notification-icon">
+																											<i class="fa  fa-line-chart fa-fw" ></i>&nbsp;
+																																																					Trends Chart
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/salesReports/wework">
+												<span id="notification-wework" class="notification-icon">
+																											<i class="fa  fa-rocket fa-fw" ></i>&nbsp;
+																																																					WeWork
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/ticket/reports/"
+						   >
+							<span id="notification-tickets" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-tags fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Tickets
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/ticket/ticketActionReport/">
+												<span id="notification-action-report" class="notification-icon">
+																											<i class="fa  fa-soccer-ball-o fa-fw" ></i>&nbsp;
+																																																					Action Report
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/ticket/reportByCustomerInfancy/">
+												<span id="notification-customer-infancy" class="notification-icon">
+																											<i class="fa  fa-child fa-fw" ></i>&nbsp;
+																																																					Customer Infancy
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/ticket/ticketReport/">
+												<span id="notification-help-desk-tickets" class="notification-icon">
+																											<i class="fa  fa-tags fa-fw" ></i>&nbsp;
+																																																					Help Desk Tickets
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/ticket/reportByAgent/">
+												<span id="notification-tickets-by-agent" class="notification-icon">
+																											<i class="fa  fa-male fa-fw" ></i>&nbsp;
+																																																					Tickets By Agent
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/ticket/reportByLastUpdate/">
+												<span id="notification-tickets-past-sla" class="notification-icon">
+																											<i class="fa  fa-exclamation fa-fw" ></i>&nbsp;
+																																																					Tickets Past SLA
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/ticket/listQueueGroups/">
+												<span id="notification-ticket-queue-groups" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-tag fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-list-ul fa-fw" ></i></span>&nbsp;
+																																																					Ticket Queue Groups
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+							</ul>
+		</li>
+				<li class="dropdown ">
+			<a class="btn " id="dd-Projects" data-toggle="dropdown" href="#"
+			   title="Projects">
+				<span id="notification-projects" class="notification-icon">
+											<i class="fa  fa-tasks " ></i>
+															<span class="hidden-md hidden-sm hidden-xs">Projects</span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-Projects">
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/project/listByProjectManager/"
+						   >
+							<span id="notification-projects-by-pm" class="notification-icon">
+																	<i class="fa  fa-tasks fa-fw" ></i>&nbsp;
+																																	Projects By PM
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/project/calendarByVP/"
+						   >
+							<span id="notification-calendar-by-vp" class="notification-icon">
+																	<i class="fa  fa-calendar fa-fw" ></i>&nbsp;
+																																	Calendar By VP
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/rapidBuild/show/"
+						   >
+							<span id="notification-o'reilly-rapid-builder-list" class="notification-icon">
+																	<i class="fa  fa-wrench fa-fw" ></i>&nbsp;
+																																	O'Reilly Rapid Builder List
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/project/listTasks/project_manager:Aaron Mier"
+						   >
+							<span id="notification-tasks---by-pm" class="notification-icon">
+																	<i class="fa  fa-check-square-o fa-fw" ></i>&nbsp;
+																																	Tasks - By PM
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/project/listTasks/owner_id:1106334194"
+						   >
+							<span id="notification-tasks---my-tasks" class="notification-icon">
+																	<i class="fa  fa-check-square-o fa-fw" ></i>&nbsp;
+																																	Tasks - My Tasks
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/project/tasksCalendar/"
+						   >
+							<span id="notification-tasks-calendar" class="notification-icon">
+																	<i class="fa  fa-calendar fa-fw" ></i>&nbsp;
+																																	Tasks Calendar
+																							</span>
+
+						</a>
+																</li>
+							</ul>
+		</li>
+				<li class="dropdown ">
+			<a class="btn " id="dd-Queues" data-toggle="dropdown" href="#"
+			   title="Queues">
+				<span id="notification-queues" class="notification-icon">
+											<i class="fa  fa-list-ul " ></i>
+															<span class="hidden-md hidden-sm hidden-xs">Queues</span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-Queues">
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/reports/creditRequest/"
+						   >
+							<span id="notification-credit-requests" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-list-ul fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-credit-card fa-fw" ></i></span>&nbsp;
+																																	Credit Requests
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/disco/etls"
+						   >
+							<span id="notification-etl-requests" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-list-ul fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-usd fa-fw" ></i></span>&nbsp;
+																																	ETL Requests
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/eicb/queue/"
+						   >
+							<span id="notification-engineering-icb" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-list-ul fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-fax fa-fw" ></i></span>&nbsp;
+																																	Engineering ICB
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/project/enterpriseQueue/"
+						   >
+							<span id="notification-enterprise" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-list-ul fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-bank fa-fw" ></i></span>&nbsp;
+																																	Enterprise
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/contract/gmApproved/"
+						   >
+							<span id="notification-gm-approved" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-list-ul fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-gm-approved fa-fw" ></i></span>&nbsp;
+																																	GM Approved
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/project/newProjects"
+						   >
+							<span id="notification-new-projects" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-list-ul fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-tasks fa-fw" ></i></span>&nbsp;
+																																	New Projects
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/contract/macOrders/"
+						   >
+							<span id="notification-mac" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-list-ul fa-fw" ></i><i class="icon text-muted fa-stack-corner-se icon-hamburger fa-fw" ></i></span>&nbsp;
+																																	MAC
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/contract/macOrdersMy/">
+												<span id="notification-my-work-orders" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-heart fa-fw" ></i><i class="icon text-muted fa-stack-corner-se icon-hamburger fa-fw" ></i></span>&nbsp;
+																																																					My Work Orders
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/contract/macOrders/">
+												<span id="notification-work-orders" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-dollar fa-fw" ></i><i class="icon text-muted fa-stack-corner-se icon-hamburger fa-fw" ></i></span>&nbsp;
+																																																					Work Orders
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/contract/macOrdersNotSent/">
+												<span id="notification-work-orders-not-sent" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-edit fa-fw" ></i><i class="icon text-muted fa-stack-corner-se icon-hamburger fa-fw" ></i></span>&nbsp;
+																																																					Work Orders Not Sent
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+							</ul>
+		</li>
+											<li class=" x ">
+			<a class="btn "
+			   href="/ticket/queues/"
+			   title="Tickets" >
+				<span id="notification-tickets" class="notification-icon">
+											<span class="fa-stack-sm  " ><i class="fa fa-stack-1x fa-tag " ></i><i class="fa text-muted fa-stack-corner-se fa-list-ul " ></i></span>
+										<span class="hidden-md hidden-sm hidden-xs">
+													Tickets
+																			<span class="badge">18</span>
+																	</span>
+				</span>
+			</a>
+		</li>
+				<li class="dropdown ">
+			<a class="btn " id="dd-Tools" data-toggle="dropdown" href="#"
+			   title="Tools">
+				<span id="notification-tools" class="notification-icon">
+											<i class="fa  fa-wrench " ></i>
+															<span class="hidden-md hidden-sm hidden-xs">Tools</span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-Tools">
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="https://confluence.vonage.com/display/BSGS/BSG+Support"
+						   target="_blank">
+							<span id="notification-confluence" class="notification-icon">
+																	<i class="fa  fa-lightbulb-o fa-fw" ></i>&nbsp;
+																																	Confluence
+																									<sup class="hidden-md hidden-sm hidden-xs"><i class="fa small fa-external-link " ></i></sup>
+															</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="https://support3.telesphere.com/admin.php?pg=kb"
+						   target="_blank">
+							<span id="notification-old-kb" class="notification-icon">
+																	<i class="fa  fa-lightbulb-o fa-fw" ></i>&nbsp;
+																																	Old KB
+																									<sup class="hidden-md hidden-sm hidden-xs"><i class="fa small fa-external-link " ></i></sup>
+															</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="https://ikb.vonage.net/PremierWest "
+						   target="_blank">
+							<span id="notification-new-ikb" class="notification-icon">
+																	<i class="fa  fa-lightbulb-o fa-fw" ></i>&nbsp;
+																																	New IKB
+																									<sup class="hidden-md hidden-sm hidden-xs"><i class="fa small fa-external-link " ></i></sup>
+															</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/tn/autodialer/"
+						   >
+							<span id="notification-autodialer" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-slack fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-bicycle fa-fw" ></i></span>&nbsp;
+																																	AutoDialer
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/broadworks/menu_tools/"
+						   >
+							<span id="notification-broadworks" class="notification-icon">
+																	<i class="fa  fa-star fa-fw" ></i>&nbsp;
+																																	BroadWorks
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/broadworks/device/">
+												<span id="notification-device-lookup" class="notification-icon">
+																											<i class="icon  icon-server-alt fa-fw" ></i>&nbsp;
+																																																					Device Lookup
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/broadworks/userId/">
+												<span id="notification-user-id-lookup" class="notification-icon">
+																											<i class="fa  fa-user fa-fw" ></i>&nbsp;
+																																																					User Id Lookup
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/broadworks/vtr/">
+												<span id="notification-vtr" class="notification-icon">
+																											<i class="fa  fa-language fa-fw" ></i>&nbsp;
+																																																					VTR
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/fax/listByEmail/"
+						   >
+							<span id="notification-faxmail-e-mail-lookup" class="notification-icon">
+																	<i class="fa  fa-fax fa-fw" ></i>&nbsp;
+																																	FaxMail E-mail Lookup
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/routerConfig/provision/"
+						   >
+							<span id="notification-router-config-tool" class="notification-icon">
+																	<i class="fa  fa-wrench fa-fw" ></i>&nbsp;
+																																	Router Config Tool
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/monitoring/sbcRegistration/"
+						   >
+							<span id="notification-sbc-registration" class="notification-icon">
+																	<i class="fa  fa-fire fa-fw" ></i>&nbsp;
+																																	SBC Registration
+																							</span>
+
+						</a>
+																</li>
+							</ul>
+		</li>
+
+							<li class="disabled"><a href="#"><i class="fa  fa-ellipsis-v " ></i></a></li>
+							<li class="dropdown ">
+			<a class="btn " id="dd-Home" data-toggle="dropdown" href="#"
+			   title="Home">
+				<span id="notification-home" class="notification-icon">
+											<i class="fa  fa-home " ></i>
+															<span class="hidden-md hidden-sm hidden-xs">Home</span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-Home">
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/view/customer_id:906152"
+						   >
+							<span id="notification-customer-information" class="notification-icon">
+																	<i class="fa  fa-building-o fa-fw" ></i>&nbsp;
+																																	Customer Information
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/dashboard/view/customer_id:906152"
+						   >
+							<span id="notification-dashboard" class="notification-icon">
+																	<i class="glyphicon  glyphicon-dashboard fa-fw" ></i>&nbsp;
+																																	Dashboard
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/attachments/customer_id:906152"
+						   >
+							<span id="notification-attachments" class="notification-icon">
+																	<i class="fa  fa-paperclip fa-fw" ></i>&nbsp;
+																																	Attachments
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/c3/view/customer_id:906152"
+						   >
+							<span id="notification-client-configuration-call" class="notification-icon">
+																	<i class='fa fa-fw ' >C3</i>&nbsp;
+																																	Client Configuration Call
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/c3/view/customer_id:906152">
+												<span id="notification-dashboard" class="notification-icon">
+																											<i class='fa fa-fw ' >C3</i>&nbsp;
+																																																					Dashboard
+																									</span>
+											</a>
+										</li>
+																																				<li class="divider">
+																																						<li class="">
+											<a href="/c3/globalParameters/customer_id:906152">
+												<span id="notification-global-parameters" class="notification-icon">
+																											<i class="fa  fa-cog fa-fw" ></i>&nbsp;
+																																																					Global Parameters
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/c3/userInfo/customer_id:906152">
+												<span id="notification-configure-users" class="notification-icon">
+																											<i class="fa  fa-user fa-fw" ></i>&nbsp;
+																																																					Configure Users
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/c3/buildBWEnterpriseGroup/customerId:906152">
+												<span id="notification-build-enterprise/group" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-users fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-star fa-fw" ></i></span>&nbsp;
+																																																					Build Enterprise/Group
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/c3/IAD/customer_id:906152">
+												<span id="notification-build-iads" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="icon fa-stack-1x icon-server-alt fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-star fa-fw" ></i></span>&nbsp;
+																																																					Build IADs
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/c3/e911Assignment/customer_id:906152">
+												<span id="notification-e911-address-assignment" class="notification-icon">
+																											<i class="fa  fa-ambulance fa-fw" ></i>&nbsp;
+																																																					E911 Address Assignment
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/c3/buildUsersAndDevices/customerId:906152">
+												<span id="notification-build-users-&-devices" class="notification-icon">
+																											<i class="fa  fa-user fa-fw" ></i>&nbsp;
+																																																					Build Users & Devices
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/c3/buildUCCServices/customerId:906152">
+												<span id="notification-build-ucc" class="notification-icon">
+																											<i class="fa  fa-user fa-fw" ></i>&nbsp;
+																																																					Build UCC
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/c3/buildSCA/customer_id:906152">
+												<span id="notification-build-sca" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-share-alt fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-phone fa-fw" ></i></span>&nbsp;
+																																																					Build SCA
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/c3/buildCollaborativeBridge/customer_id:906152">
+												<span id="notification-build-collaborative-bridge" class="notification-icon">
+																											<i class="glyphicon  glyphicon-phone-alt fa-fw" ></i>&nbsp;
+																																																					Build Collaborative Bridge
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/c3/buildSpeak2Dial/customer_id:906152">
+												<span id="notification-build-speak2dial" class="notification-icon">
+																											<i class="fa  fa-comments-o fa-fw" ></i>&nbsp;
+																																																					Build Speak2Dial
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/c3/customTags/customer_id:906152">
+												<span id="notification-custom-tags-management" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="icon fa-stack-1x icon-server-alt fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-star fa-fw" ></i></span>&nbsp;
+																																																					Custom Tags Management
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/c3/teamOne/customer_id:906152">
+												<span id="notification-team-one" class="notification-icon">
+																											<i class="fa  fa-group fa-fw" ></i>&nbsp;
+																																																					Team One
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/contacts/customer_id:906152"
+						   >
+							<span id="notification-contacts" class="notification-icon">
+																	<i class="fa  fa-user fa-fw" ></i>&nbsp;
+																																	Contacts
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/dispatch/listByCustomer/customer_id:906152"
+						   >
+							<span id="notification-dispatches" class="notification-icon">
+																	<i class="fa  fa-truck fa-fw" ></i>&nbsp;
+																																	Dispatches
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/listPortalUsers/customer_id:906152"
+						   >
+							<span id="notification-portal-users" class="notification-icon">
+																	<i class="fa  fa-group fa-fw" ></i>&nbsp;
+																																	Portal Users
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/disco/disco/customer_id:906152"
+						   >
+							<span id="notification-disconnect" class="notification-icon">
+																	<i class="fa  fa-unlink fa-fw" ></i>&nbsp;
+																																	Disconnect
+																							</span>
+
+						</a>
+																</li>
+							</ul>
+		</li>
+				<li class="dropdown ">
+			<a class="btn " id="dd-Billing" data-toggle="dropdown" href="#"
+			   title="Billing">
+				<span id="notification-billing" class="notification-icon">
+											<i class="glyphicon  glyphicon-usd " ></i>
+															<span class="hidden-md hidden-sm hidden-xs">Billing</span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-Billing">
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/contract/listByCustomer/customer_id:906152"
+						   >
+							<span id="notification-contracts" class="notification-icon">
+																	<i class="fa  fa-files-o fa-fw" ></i>&nbsp;
+																																	Contracts
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/contract/listByCustomer/customer_id:906152">
+												<span id="notification-list" class="notification-icon">
+																											<i class="fa  fa-files-o fa-fw" ></i>&nbsp;
+																																																					List
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/contract/summary/customer_id:906152">
+												<span id="notification-summary" class="notification-icon">
+																											<i class="fa  fa-stack-exchange fa-rotate-180 fa-fw" ></i>&nbsp;
+																																																					Summary
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/contract/timeline/customer_id:906152">
+												<span id="notification-timeline" class="notification-icon">
+																											<i class="fa  fa-clock-o fa-fw" ></i>&nbsp;
+																																																					Timeline
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/reports/creditRequest/customer_id:906152"
+						   >
+							<span id="notification-credit-request" class="notification-icon">
+																	<i class="fa  fa-credit-card fa-fw" ></i>&nbsp;
+																																	Credit Request
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/customPriceList/view/customer_id:906152"
+						   >
+							<span id="notification-custom-price-list" class="notification-icon">
+																	<i class="fa  fa-file-text fa-fw" ></i>&nbsp;
+																																	Custom Price List
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/customPriceList/view/customer_id:906152">
+												<span id="notification-view" class="notification-icon">
+																											<i class="glyphicon  glyphicon-search fa-fw" ></i>&nbsp;
+																																																					View
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/inventory/listByCustomer/customer_id:906152"
+						   >
+							<span id="notification-inventory" class="notification-icon">
+																	<i class="fa  fa-barcode fa-fw" ></i>&nbsp;
+																																	Inventory
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/inventory/historyByCustomer/customer_id:906152"
+						   >
+							<span id="notification-inventory-history" class="notification-icon">
+																	<i class="fa  fa-history fa-fw" ></i>&nbsp;
+																																	Inventory History
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/billing/listInvoices/customer_id:906152"
+						   >
+							<span id="notification-invoices-&-payments" class="notification-icon">
+																	<i class="fa  fa-money fa-fw" ></i>&nbsp;
+																																	Invoices & Payments
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/contract/productPriceSheet/customer_id:906152"
+						   >
+							<span id="notification-product-price-sheet" class="notification-icon">
+																	<i class="fa  fa-shopping-cart fa-fw" ></i>&nbsp;
+																																	Product Price Sheet
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/recon/customerdetails/CustomerID:906152"
+						   >
+							<span id="notification-reconciliation" class="notification-icon">
+																	<i class="fa  fa-bullseye fa-fw" ></i>&nbsp;
+																																	Reconciliation
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/thresholds/customer_id:906152"
+						   >
+							<span id="notification-thresholds" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-sliders fa-fw" ></i><i class="glyphicon text-muted fa-stack-corner-se glyphicon-usd fa-fw" ></i></span>&nbsp;
+																																	Thresholds
+																							</span>
+
+						</a>
+																</li>
+							</ul>
+		</li>
+				<li class="dropdown ">
+			<a class="btn " id="dd-Data" data-toggle="dropdown" href="#"
+			   title="Data">
+				<span id="notification-data" class="notification-icon">
+											<i class="fa  fa-database " ></i>
+															<span class="hidden-md hidden-sm hidden-xs">Data</span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-Data">
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/cdrConfig/customer_id:906152"
+						   >
+							<span id="notification-cdr-config" class="notification-icon">
+																	<i class="fa  fa-pie-chart fa-fw" ></i>&nbsp;
+																																	CDR Config
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/circuit/listByCustomer/customer_id:906152"
+						   >
+							<span id="notification-circuits" class="notification-icon">
+																	<i class="glyphicon  glyphicon-flash fa-fw" ></i>&nbsp;
+																																	Circuits
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/device/listByCustomer/customer_id:906152"
+						   >
+							<span id="notification-devices" class="notification-icon">
+																	<i class="icon  icon-server-alt fa-fw" ></i>&nbsp;
+																																	Devices
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/dns/listByCustomer/customer_id:906152"
+						   >
+							<span id="notification-dns" class="notification-icon">
+																	<i class="icon  icon-cloud-transfer fa-fw" ></i>&nbsp;
+																																	DNS
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/ip/listByCustomer/customer_id:906152"
+						   >
+							<span id="notification-ip-networks" class="notification-icon">
+																	<i class="icon  icon-www fa-fw" ></i>&nbsp;
+																																	IP Networks
+																							</span>
+
+						</a>
+																</li>
+							</ul>
+		</li>
+											<li class=" x ">
+			<a class="btn "
+			   href="/project/listByCustomer/customer_id:906152"
+			   title="Projects" >
+				<span id="notification-projects" class="notification-icon">
+											<i class="fa  fa-tasks " ></i>
+										<span class="hidden-md hidden-sm hidden-xs">
+													Projects
+																							</span>
+				</span>
+			</a>
+		</li>
+											<li class=" x ">
+			<a class="btn "
+			   href="/ticket/listByCustomer/filter:1,customer_id:906152"
+			   title="Tickets" >
+				<span id="notification-tickets" class="notification-icon">
+											<i class="fa  fa-tags " ></i>
+										<span class="hidden-md hidden-sm hidden-xs">
+													Tickets
+																							</span>
+				</span>
+			</a>
+		</li>
+				<li class="dropdown ">
+			<a class="btn " id="dd-Voice" data-toggle="dropdown" href="#"
+			   title="Voice">
+				<span id="notification-voice" class="notification-icon">
+											<i class="fa  fa-volume-up " ></i>
+															<span class="hidden-md hidden-sm hidden-xs">Voice</span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-Voice">
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/pgi/provisionConferencing/customer_id:906152"
+						   >
+							<span id="notification-audio-connect-(pgi)" class="notification-icon">
+																	<i class="fa  fa-user-plus fa-fw" ></i>&nbsp;
+																																	Audio Connect (PGI)
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/broadworks/menu/customer_id:906152"
+						   >
+							<span id="notification-broadworks" class="notification-icon">
+																	<i class="fa  fa-star fa-fw" ></i>&nbsp;
+																																	BroadWorks
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/broadworks/groupDetail/customer_id:906152">
+												<span id="notification-details" class="notification-icon">
+																											<i class="fa  fa-hospital-o fa-fw" ></i>&nbsp;
+																																																					Details
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/broadworks/listDevicesByCustomer/customer_id:906152">
+												<span id="notification-devices" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="icon fa-stack-1x icon-server-alt fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-star fa-fw" ></i></span>&nbsp;
+																																																					Devices
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/broadworks/listGroupsByCustomer/customer_id:906152">
+												<span id="notification-groups" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-users fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-star fa-fw" ></i></span>&nbsp;
+																																																					Groups
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/broadworks/activateNumbers/customer_id:906152">
+												<span id="notification-number-activation" class="notification-icon">
+																											<i class="fa  fa-magic fa-fw" ></i>&nbsp;
+																																																					Number Activation
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/broadworks/registrations/customer_id:906152">
+												<span id="notification-registrations" class="notification-icon">
+																											<i class="icon  icon-lan fa-fw" ></i>&nbsp;
+																																																					Registrations
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/broadworks/platformConfiguration/customer_id:906152">
+												<span id="notification-platform-configuration" class="notification-icon">
+																											<i class="fa  fa-cog fa-fw" ></i>&nbsp;
+																																																					Platform Configuration
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/broadworks/migrateServicePack/customer_id:906152">
+												<span id="notification-service-pack-update-script" class="notification-icon">
+																											<i class="fa  fa-gears fa-fw" ></i>&nbsp;
+																																																					Service Pack Update Script
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/broadworks/listUsersByCustomer/customer_id:906152">
+												<span id="notification-users" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-user fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-star fa-fw" ></i></span>&nbsp;
+																																																					Users
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/visualVoicemail/listByCustomer/customer_id:906152">
+												<span id="notification-visual-voicemail" class="notification-icon">
+																											<i class="fa  fa-star fa-fw" ></i>&nbsp;
+																																																					Visual Voicemail
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="#"
+						   >
+							<span id="notification-cdrs" class="notification-icon">
+																	<i class="fa  fa-database fa-fw" ></i>&nbsp;
+																																	CDRs
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/cdr/stationSearch/customer_id:906152">
+												<span id="notification-station-search" class="notification-icon">
+																											<i class="glyphicon  glyphicon-search fa-fw" ></i>&nbsp;
+																																																					Station Search
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/cdr/usageHistory/customer_id:906152">
+												<span id="notification-usage-history" class="notification-icon">
+																											<i class="fa  fa-line-chart fa-fw" ></i>&nbsp;
+																																																					Usage History
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/cnam/cnams/customer_id:906152"
+						   >
+							<span id="notification-manage-caller-id" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-barcode fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																	Manage Caller Id
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/viewCFA/customer_id:906152"
+						   >
+							<span id="notification-cfa-exceptions" class="notification-icon">
+																	<i class="fa  fa-ban fa-fw" ></i>&nbsp;
+																																	CFA Exceptions
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="dropdown-submenu ">
+						<a role="menuitem" tabindex="-1"
+						   href="/tn/e911Addresses/customer_id:906152"
+						   >
+							<span id="notification-e911" class="notification-icon">
+																	<i class="fa  fa-ambulance fa-fw" ></i>&nbsp;
+																																	E911
+																							</span>
+
+						</a>
+													<ul role="menu" class="dropdown-menu">
+																											<li class="">
+											<a href="/tn/e911Addresses/customer_id:906152">
+												<span id="notification-addresses" class="notification-icon">
+																											<i class="fa  fa-ambulance fa-fw" ></i>&nbsp;
+																																																					Addresses
+																									</span>
+											</a>
+										</li>
+																																				<li class="">
+											<a href="/tn/e911Assignment/customer_id:906152">
+												<span id="notification-tn-e911-assignment" class="notification-icon">
+																											<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-barcode fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-print fa-fw" ></i></span>&nbsp;
+																																																					TN E911 Assignment
+																									</span>
+											</a>
+										</li>
+																								</ul>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/fax/listByCustomer/customer_id:906152"
+						   >
+							<span id="notification-faxmail" class="notification-icon">
+																	<i class="fa  fa-fax fa-fw" ></i>&nbsp;
+																																	FaxMail
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/tn/listByCustomer/customer_id:906152"
+						   >
+							<span id="notification-numbers" class="notification-icon">
+																	<i class="fa  fa-slack fa-fw" ></i>&nbsp;
+																																	Numbers
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/services/webConnectAccounts/customer_id:906152"
+						   >
+							<span id="notification-webconnect" class="notification-icon">
+																	<i class="fa  fa-wifi fa-fw" ></i>&nbsp;
+																																	WebConnect
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/broadworks/cancelServices/customer_id:906152"
+						   >
+							<span id="notification-remove-voice-services" class="notification-icon">
+																	<i class="glyphicon  glyphicon-minus fa-fw" ></i>&nbsp;
+																																	Remove Voice Services
+																							</span>
+
+						</a>
+																</li>
+							</ul>
+		</li>
+				<li class="dropdown ">
+			<a class="btn " id="dd-View In" data-toggle="dropdown" href="#"
+			   title="View In">
+				<span id="notification-view-in" class="notification-icon">
+											<i class="fa  fa-external-link " ></i>
+															<span class="hidden-md hidden-sm hidden-xs">View In</span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-View In">
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/viewInSalesForce/customer_id:906152"
+						   target="_blank">
+							<span id="notification-view-in-sales-force" class="notification-icon">
+																	<i class="fa  fa-sellsy fa-fw" ></i>&nbsp;
+																																	View In Sales Force
+																									<sup class="hidden-md hidden-sm hidden-xs"><i class="fa small fa-external-link " ></i></sup>
+															</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/customer/viewInSugar/customer_id:906152"
+						   target="_blank">
+							<span id="notification-view-in-sugar" class="notification-icon">
+																	<i class="fa  fa-cube fa-fw" ></i>&nbsp;
+																																	View In Sugar
+																									<sup class="hidden-md hidden-sm hidden-xs"><i class="fa small fa-external-link " ></i></sup>
+															</span>
+
+						</a>
+																</li>
+							</ul>
+		</li>
+											<li class=" x ">
+			<a class="btn "
+			   href="/dashboard/view/customer_id:906152"
+			   title="Dashboard" >
+				<span id="notification-dashboard" class="notification-icon">
+											<i class="glyphicon  glyphicon-dashboard " ></i>
+										<span class="hidden-md hidden-sm hidden-xs">
+																							</span>
+				</span>
+			</a>
+		</li>
+											<li class=" x ">
+			<a class="btn "
+			   href="#"
+			   title="Zeus" >
+				<span id="notification-zeus" class="notification-icon">
+											<i class="fa  fa-Magnifying Glass " ></i>
+										<span class="hidden-md hidden-sm hidden-xs">
+													Zeus
+																							</span>
+				</span>
+			</a>
+		</li>
+
+
+										<li class="dropdown pull-right">
+			<a class="btn " id="dd-" data-toggle="dropdown" href="#"
+			   title="">
+				<span id="notification-" class="notification-icon">
+											<i class="fa  fa-sliders " ></i>
+																<span class="badge">95</span>
+										<span class="hidden-md hidden-sm hidden-xs"></span>
+					<span class="caret"></span>
+				</span>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dd-">
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/user/"
+						   >
+							<span id="notification-aaron-mier" class="notification-icon">
+																	<i class="fa  fa-user fa-fw" ></i>&nbsp;
+																																	Aaron Mier
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/user/activeCalls/"
+						   >
+							<span id="notification-active-call-lookup" class="notification-icon">
+																	<i class="fa  fa-phone fa-fw" ></i>&nbsp;
+																																	Active Call Lookup
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/user/callLog/"
+						   >
+							<span id="notification-call-log" class="notification-icon">
+																	<i class="fa  fa-file-text fa-fw" ></i>&nbsp;
+																																	Call Log
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/user/click2call/"
+						   >
+							<span id="notification-click-2-call" class="notification-icon">
+																	<span class="fa-stack-sm fa-fw " ><i class="fa fa-stack-1x fa-hand-pointer-o fa-fw" ></i><i class="fa text-muted fa-stack-corner-se fa-phone fa-fw" ></i></span>&nbsp;
+																																	Click 2 Call
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/news/view"
+						   >
+							<span id="notification-zeus-news" class="notification-icon">
+																	<i class="fa  fa-newspaper-o fa-fw" ></i>&nbsp;
+																									<span class="badge">95</span>
+																									Zeus News
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/history/"
+						   >
+							<span id="notification-history" class="notification-icon">
+																	<i class="fa  fa-history fa-fw" ></i>&nbsp;
+																																	History
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/notification/addMessage/url:%2Fticket%2FviewHS%2Fticket_id%3A1135612"
+						   >
+							<span id="notification-share" class="notification-icon">
+																	<i class="fa  fa-share-alt fa-fw" ></i>&nbsp;
+																																	Share
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/about/status/"
+						   >
+							<span id="notification-status" class="notification-icon">
+																	<i class="fa  fa-check-circle fa-fw" ></i>&nbsp;
+																																	Status
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/downloads/"
+						   >
+							<span id="notification-downloads" class="notification-icon">
+																	<i class="fa  fa-cloud-download fa-fw" ></i>&nbsp;
+																																	Downloads
+																							</span>
+
+						</a>
+																</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" class="divider">
+												</li>
+															<li role="presentation" >
+						<a role="menuitem" tabindex="-1"
+						   href="/login/logout/"
+						   >
+							<span id="notification-logout" class="notification-icon">
+																	<i class="fa  fa-sign-out fa-fw" ></i>&nbsp;
+																																	Logout
+																							</span>
+
+						</a>
+																</li>
+							</ul>
+		</li>
+
+							<li class="dropdown pull-right">
+	<a class="btn" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
+		<span class="notification-icon notification-icon-green">
+			<i class="fa  fa-comments " ></i>
+					</span> </a>
+
+	<div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+		<ul class="notifications">
+							<li class="menu-item center text-success">
+					<h4>No Unread Notifications</h4>
+				</li>
+
+		</ul>
+		<div class="more">
+			<h4 class="">
+				<div class="row">
+					<div class="col-md-3">
+						<a class="btn btn-link text-uppercase" href="/notification/"><i class="fa  fa-eye " ></i> View All </a>
+					</div>
+					<div class="col-md-3">
+						<a class="btn btn-link text-uppercase" href="/notification/addMessage/"><i class="fa  fa-paper-plane " ></i>
+							Send </a>
+					</div>
+									</div>
+			</h4>
+		</div>
+	</div>
+</li>
+				<li class="disabled pull-right hidden-lg"><a href="#"><i class="fa  fa-ellipsis-v " ></i></a></li>
+
+
+			</ul>
+	<div class="clearfix">
+					<ol class="breadcrumb" id="header_crumbs">
+			<li >
+									<a href="/">
+								&#x24E9;
+							</a>
+					</li>
+			<li >
+												<a href="/customer/view/customer_id:906120">
+								<i class="fa hidden-xs fa-building " ></i>
+									</a>
+													<a href="/customer/view/customer_id:906120">
+								<span class="hidden-xs">Parent - </span>906120
+							</a>
+					</li>
+			<li >
+												<a href="/customer/view/customer_id:906152">
+								<i class="fa hidden-xs fa-building-o " ></i>
+									</a>
+													<a href="/customer/view/customer_id:906152">
+								<span class="hidden-xs">Customer - </span>906152
+							</a>
+					</li>
+			<li >
+												<a href="/ticket/listByCustomer/customer_id:906152">
+								<i class="fa hidden-xs fa-tags " ></i>
+									</a>
+													<a href="/ticket/listByCustomer/customer_id:906152">
+								Tickets
+							</a>
+					</li>
+			<li >
+												<a href="/ticket/view/ticket_id:1135612">
+								<i class="fa hidden-xs fa-tag " ></i>
+									</a>
+													<a href="/ticket/view/ticket_id:1135612">
+								1135612
+							</a>
+					</li>
+			<li class="active">
+											<i class="fa hidden-xs fa-life-saver " ></i>
+														Helpspot
+						</li>
+	</ol>
+
+	<ol id="header_hint" class="breadcrumb hidden-xs">
+											<li title=""><a id="breadcrumb_legacy_type_link">VO</a></li>
+				<li>Snelling Staffing Arlington Heights</li>
+	</ol>
+
+			</div>
+</nav>
+
+
+<div id="alert_placeholder"></div>
+<div class="container-fluid" style="height:100%;">
+
+
+	<a class="btn btn-default bt-xs btn-block" href="#" style="padding:0;font-size:8px;" id="customer_notes_info_collapse">
+	<i class="glyphicon  glyphicon-chevron-up " ></i>
+	<i class="glyphicon  glyphicon-chevron-up " ></i>
+	<i class="glyphicon  glyphicon-chevron-up " ></i>
+	<i class="glyphicon  glyphicon-chevron-up " ></i>
+	<i class="glyphicon  glyphicon-chevron-up " ></i>
+</a>
+<div class="row" id="customer_notes_info">
+	<div class="panel panel-default panel-success" style="max-height:140px;overflow:auto;margin:3px;">
+		<div class="panel-heading clearfix">
+			<h1 class="panel-title">Account Specific Notes</h1>
+		</div>
+		<div class="panel-body">
+			No customer specific notes.
+		</div>
+	</div>
+		<div class="panel panel-default panel-success" style="max-height:140px;overflow:auto;margin:3px;">
+		<div class="panel-heading clearfix">
+			<h1 class="panel-title">Parent Customer Notes</h1>
+		</div>
+		<div class="panel-body">
+					</div>
+	</div>
+</div>
+<a class="btn btn-default bt-xs btn-block" href="#" style="padding:0;font-size:8px;" id="customer_info_collapse">
+	<i class="glyphicon  glyphicon-chevron-up " ></i>
+	<i class="glyphicon  glyphicon-chevron-up " ></i>
+	<i class="glyphicon  glyphicon-chevron-up " ></i>
+	<i class="glyphicon  glyphicon-chevron-up " ></i>
+	<i class="glyphicon  glyphicon-chevron-up " ></i>
+</a>
+
+<div class="row" id="customer_info">
+	<div class="col-md-12">
+		<div class="col-md-3 col-sm-6">
+			<label class="control-label" for="account_status">Account Status</label>
+			<label class=sr-only" for="is_vip">VIP?</label>
+									<div class="input-group">
+				<input type="text" class="form-control input-sm " name="account_status" id="account_status"
+				       value="Active" readonly/>
+        <span class="input-group-addon ">
+          <input type="checkbox" name="is_vip" id="is_vip"  disabled/> VIP
+        </span>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-6">
+												<label class="control-label" for="billing_status">Billing Status</label>
+			<input type="text" class="form-control input-sm danger" name="billing_status" id="billing_status"
+			       value="Not In Billing" readonly/>
+		</div>
+		<div class="col-md-2 col-sm-3">
+			<label class="control-label" for="enterprise_name">Enterprise</label>
+
+			<p class="form-control-static">
+									<a
+						href="https://myavoice2.telesphere.com/Operator/ServiceProviders/Modify/index.jsp?key=SNS8"
+						target="_blank">
+						SNS8
+					</a>
+							</p>
+		</div>
+		<div class="col-md-2 col-sm-3">
+			<label class="control-label" for="group_name">Group</label>
+
+			<p class="form-control-static">
+															<a
+							href="https://myavoice2.telesphere.com/Operator/Groups/Modify/index.jsp?key=SNS8%3A%3ASNS8-Arlington_Heights"
+							target="_blank">
+							SNS8-Arlington_Heights
+						</a>
+												</p>
+		</div>
+
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-3 col-sm-5">
+			<label class="control-label" for="access_hours">Access Hours</label>
+			<label class="control-label" for="open24by7">Open 24x7</label>
+
+			<div class="input-group">
+				<input type="text" class="form-control input-sm" name="access_hours" id="access_hours"
+				       value="8 am to 5 pm M-F" readonly/>
+        <span class="input-group-addon ">
+          <input type="checkbox" name="open24by7" id="open24by7"                  disabled/> Open 24x7
+        </span>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-5">
+			<label class="control-label" for="cpni_passcode">Customer PIN</label>
+			<input type="text" class="form-control input-sm" name="cpni_passcode" id="cpni_passcode"
+			       value="906120" readonly/>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<label class="control-label" for="authorization_notes">Authorization Notes</label>
+			<input type="text" class="form-control input-sm" name="authorization_notes" id="authorization_notes"
+			       value="" readonly/>
+		</div>
+	</div>
+	</div>
+
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('#customer_info_collapse').click(function(e)
+		{
+			e.preventDefault();
+			$('#customer_info').toggle();
+			$(window).resize();
+		});
+		$('#customer_notes_info_collapse').click(function(e)
+		{
+			e.preventDefault();
+			$('#customer_notes_info').toggle();
+			$(window).resize();
+		});
+	});
+</script>
+<div id="iframe_top"></div>
+<div id="iframe_div" style="position:fixed;left:0;right:0;bottom:0;">
+	<iframe id="helpspot" style="width:100%;height:100%;" src="https://support3.telesphere.com/admin.php?pg=request&reqid=1135612"></iframe>
+	<input id="helpspotUrl" value="https://support3.telesphere.com" hidden>
+</div>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('#iframe_div').css('top', $('#iframe_top').position().top + 4 + 'px');
+		$('#helpspot').height('100%');
+
+		$(window).resize(function()
+		{
+			$('#iframe_div').css('top', $('#iframe_top').position().top + 4 + 'px');
+			$('#helpspot').height('100%');
+		});
+	});
+
+	// cross-document messaging
+	function processXDMessage(event)
+	{
+		var helpspotUrl = $("#helpspotUrl").val();
+		// checking for typeof because HP Functional testing agent extension used by QA calls with a
+		// object instead of ticket id like it is intended.
+		if(event.origin == helpspotUrl && typeof event.data != 'object')
+		{
+			window.location = '/ticket/viewHS/ticket_id:' + event.data;
+		}
+	}
+
+	if(window.attachEvent)
+	{
+		window.attachEvent('onmessage', processXDMessage);
+	}
+	else
+	{
+		if(window.addEventListener)
+		{
+			window.addEventListener('message', processXDMessage, false);
+		}
+	}
+</script>
+</div>
+<script src="/js/Zeus/ga-events.js"></script>
+<script src="/htdocs/js/jquery.mask.min.js"></script>
+
+</body>
+</html>

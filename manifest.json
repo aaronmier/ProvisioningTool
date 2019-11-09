@@ -1,0 +1,85 @@
+{
+        "name": "Vonage Provisioning Helper - Beta Testing",
+        "manifest_version": 2,
+        "version": "0.0.1",
+        "author": "Aaron Mier",
+        "description": "An easy tool to help Vonage Provisioners",
+        "browser_action": {
+            "default_icon": "img/icon.png",
+    	      "default_popup": "popup.html"
+        },
+        "icons":{
+          "16": "img/icon.png",
+          "48": "img/icon.png",
+          "128": "img/icon.png"
+        },
+        "permissions": [
+        "storage",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+       ],
+
+      "background": {
+        "scripts": [
+          "js/jquery/jquery-3.3.1.min.js",
+          "js/redirect-to-home/event-handler.js",
+          "js/storage/request-handler.js",
+          "js/background/background.js"
+      ]
+
+      },
+      "content_scripts": [
+            {
+              "all_frames" : true,
+              "matches": ["https://zeus.telesphere.com/quote/view/customer_id:*"],
+              "js": ["js/jquery/jquery-3.3.1.min.js", "js/mac/pull-info.js/event-handler.js"],
+              "run_at" : "document_end"
+            },
+            {
+              "all_frames" : true,
+              "matches": ["https://support3.telesphere.com/admin.php?pg=request&reqid=*"],
+              "js": ["js/jquery/jquery-3.3.1.min.js", "js/helpspot/templates.js"],
+              "run_at" : "document_end",
+              "match_about_blank": true
+            },
+            {
+              "all_frames" : true,
+              "matches": ["https://www.netxusa.com/ordercheckout/header"],
+              "js": ["js/jquery/jquery-3.3.1.min.js", "js/netx/order-filler.js"],
+              "run_at" : "document_end"
+            },
+            {
+              "all_frames" : true,
+              "matches": ["https://www.netxusa.com/ordercheckout/addresses"],
+              "js": ["js/jquery/jquery-3.3.1.min.js", "js/netx/address-filler.js"],
+              "run_at" : "document_end"
+            },
+            {
+              "all_frames" : true,
+              "matches": ["https://zeus.telesphere.com/ticket/add/customer_id:*"],
+              "js": ["js/jquery/jquery-3.3.1.min.js", "js/zeus/zeus-add-ticket.js"],
+              "run_at" : "document_end"
+            },
+            {
+              "all_frames": true,
+              "matches": ["https://support3.telesphere.com/admin.php?pg=request*"],
+              "js": ["js/jquery/jquery-3.3.1.min.js", "js/helpspot/helpspot-event-handler.js"],
+              "run_at" : "document_end"
+            },
+            {
+            "all_frames": true,
+            "matches": ["http://sugarcurve:8080/*"],
+            "js": ["js/jquery/jquery-3.3.1.min.js", "js/sugar/filler.js"],
+            "run_at" : "document_end"
+          },
+          {
+          "all_frames": true,
+          "matches": ["https://www.netxusa.com/ordercheckout/addresses*"],
+          "js": ["js/jquery/jquery-3.3.1.min.js", "js/netx/address-filler.js"],
+          "run_at" : "document_end"
+        }
+      ]
+
+}

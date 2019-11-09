@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/home/styles.css">
+    <script src="js/jquery/jquery-3.3.1.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="author" content="Aaron Mier">
+    <title>Vonage Provisioning Helper</title>
+  </head>
+  <body>
+    <div id="main-container" class="container d-flex align-items-center h-100">
+      <div id="box" class="flex-column w-100 h-100">
+        <div class="d-flex justify-content-center">
+          <img id="logo" src="img/home.png" alt="">
+        </div>
+        <div class="d-flex justify-content-center p-1">
+          <input id="pid" class="form-control w-25" type="text" name="" placeholder="Project Id..."value="">
+        </div>
+        <div class="d-flex justify-content-center">
+          <text class="m-1">Or</text>
+        </div>
+        <div class="d-flex justify-content-center">
+          <input id="account" class="form-control w-25" type="text" name="" placeholder="Account..."value="">
+        </div>
+        <div class="d-flex justify-content-center m-2">
+          <button id="goBtn" class="btn btn-lg btn-info" type="button" name="button">Go</button>
+        </div>
+        <div class="d-flex justify-content-start m-2 h-25">
+          <div class="d-flex align-items-end theicons" id="sugar-icon"></div>
+          <div class="d-flex align-items-end theicons" id="palladion-icon"></div>
+        </div>
+        <div class="d-flex justify-content-center m-2">
+          <textarea placeholder='Notes here..' name="name" rows="4" cols="80"></textarea>
+        </div>
+      </div>
+    </div>
+  </body>
+<script src="js/home/event-handler.js"></script>
+</html>

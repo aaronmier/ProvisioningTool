@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/home/styles.css">
+    <script src="js/jquery/jquery-3.3.1.min.js"></script>
+    <meta charset="utf-8">
+    <title>Vonage Provisioning Helper</title>
+  </head>
+  <body>
+    <div class="container d-flex align-items-center h-100">
+      <div id="box" class="flex-column w-100 h-50">
+        <div class="d-flex justify-content-center">
+          <select id="type" class="form-control w-25">
+            <option value="Support">Support</option>
+            <option value="Activation">Activation</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-center">
+          <input id="caller" class="form-control w-25 m-2" type="text" name="" placeholder="Caller Name..."value="">
+        </div>
+        <div class="d-flex justify-content-center">
+          <input id="callback" class="form-control w-25 m-2" type="text" name="" placeholder="Callback Number..."value="">
+        </div>
+        <div class="d-flex justify-content-center">
+          <input id="project" class="form-control w-25" type="text" name="" placeholder="Project..."value="">
+        </div>
+        <div class="d-flex justify-content-center">
+          <input id="account" class="form-control w-25 m-2" type="text" name="" placeholder="Account..."value="">
+        </div>
+        <div class="d-flex justify-content-center">
+          <input id="helpspot" class="form-control w-25" type="text" name="" placeholder="Helpspot Ticket..."value="">
+        </div>
+        <div class="d-flex justify-content-center m-2">
+          <button id="goBtn" class="btn btn-lg btn-info" type="button" name="button">Go</button>
+        </div>
+        <div class="d-flex justify-content-start m-2 h-25">
+          <div class="d-flex align-items-end theicons" id="sugar-icon"></div>
+          <div class="d-flex align-items-end theicons" id="palladion-icon"></div>
+        </div>
+        <div class="d-flex justify-content-center m-2">
+          <textarea placeholder='Notes here..' name="name" rows="4" cols="80"></textarea>
+        </div>
+      </div>
+    </div>
+  </body>
+<script src="js/home/event-handler.js"></script>
+</html>
