@@ -1,9 +1,9 @@
 {
-        "name": "Vonage Provisioning Helper - Beta Testing",
+        "name": "Provisioning Helper",
         "manifest_version": 2,
         "version": "0.0.1",
         "author": "Aaron Mier",
-        "description": "An easy tool to help Vonage Provisioners",
+        "description": "An easy tool to help Voice Provisioners",
         "browser_action": {
             "default_icon": "img/icon.png",
     	      "default_popup": "popup.html"

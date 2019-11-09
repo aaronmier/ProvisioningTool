@@ -12,33 +12,48 @@ port.postMessage({subject: 'opened'});
 port.onMessage.addListener(function(message){
 // If data is not empty
   if(message.state!='none'){
-    $('#mac').val(message.mac);
-    $('#acc').val(message.account);
-    $('#customer').val(message.customer);
-    $('#group').val(message.group);
-    $('#sow').val(message.sow);
-    $('#ticket').val(message.ticket);
-    $('#url').val($('#url').val() + message.enterprise.toLowerCase());
-    $('#fName').val(message.sendToFName);
-    $('#lName').val(message.sendToLName);
-    $('#phoneNumber').val(message.phoneNumber);
-    $('#email').val(message.sendToEmail);
-    $('#street').val(message.street);
-    $('#city').val(message.city);
-    $('#st').val(message.st);
-    $('#zip').val(message.zip);
-    $('#trackingNum').val(message.tracking);
-
-
-    console.log('group: ' + message.group +' ent: ' + message.enterprise + ' st: ' + message.st)
-
-
-    if(message.assignTo != null){
+    if(message.mac){
+      $('#mac').val(message.mac);
+    }
+    if(message.account){
+      $('#acc').val(message.account);
+    }
+    if(message.customer){
+      $('#customer').val(message.customer);
+    }
+    if(message.sow){
+      $('#sow').val(message.sow);
+    }
+    if(message.ticket){
+      $('#ticket').val(message.ticket);
+    }
+    if(message.enterprise){
+      $('#url').val($('#url').val() + message.enterprise.toLowerCase());
+    }
+    if(message.sendToFName){
+      $('#fName').val(message.sendToFName);
+    }
+    if(message.sendToLName){
+      $('#lName').val(message.sendToLName);
+    }
+    if(message.sendToEmail){
+      $('#email').val(message.sendToEmail);
+    }
+    if(message.street){
+      $('#street').val(message.street);
+    }
+    if(message.city){
+      $('#city').val(message.city);
+    }
+    if(message.zip){
+      $('#zip').val(message.zip);
+    }
+    if(message.tracking){
+      $('#trackingNum').val(message.tracking);
+    }
+    if(message.assignTo){
       $('#assignTo').val(message.assignTo);
     }
-    console.log('test')
-
-
   }
 });
 

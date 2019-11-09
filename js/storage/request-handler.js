@@ -15,11 +15,9 @@ chrome.runtime.onConnect.addListener(function(port){
               break;
               case "tabs":
                 chrome.storage.sync.set({tabName: message.tabName})
-                console.log(message.tabName)
                 break;
                 case "tabCheck":
                   chrome.storage.sync.get(['tabName'], function(result) {
-                    console.log('in tab check')
                     port.postMessage(result);
                   });
                   break;
@@ -30,7 +28,6 @@ chrome.runtime.onConnect.addListener(function(port){
                 });
                     break;
                     case "NetXFillAddress":
-                    console.log('sent to active tab fill address')
                     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
                     var activeTab = tabs[0];
                     chrome.tabs.sendMessage(activeTab.id, message);
@@ -38,7 +35,6 @@ chrome.runtime.onConnect.addListener(function(port){
                       break;
             case "macChange":
             assignTo = message.assignTo;
-              console.log('in bg')
               chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
               var activeTab = tabs[0];
               chrome.tabs.sendMessage(activeTab.id, assignTo);
@@ -66,34 +62,40 @@ chrome.runtime.onConnect.addListener(function(port){
             saveData(message);
             break;
             case 'getTicketInfo':
-              ticketUrl = 'https://support3.telesphere.com/admin.php?pg=request&reqid=' + message.ticket
-              $.ajax({
-                url: ticketUrl,
-                contentType: 'text/html; charset=UTF-8',
-                dataType: "text", //was text
-                crossDomain: true,
-                success: function(data){
-                  var phoneNum = $(data).find("#sPhone")[0].value;
-                  chrome.storage.sync.set({phoneNumber: phoneNum});
-                },
-                fail: function(xhr, textStatus, errorThrown){
-                  console.log('request to get phone number failed');
-                }
-              });
-              $.ajax({
-                url: 'https://zeus.telesphere.com/ticket/viewHS/ticket_id:' + message.ticket,
-                contentType: 'text/html; charset=UTF-8',
-                dataType: "text", //was text
-                crossDomain: true,
-                success: function(data){
-                  var group = $(data).find("#customer_info > div:nth-child(1) > div:nth-child(4) > p > a")[0].textContent.trim()
-                  var enterprise = $(data).find("#customer_info > div:nth-child(1) > div:nth-child(3) > p > a")[0].textContent.trim()
-                  chrome.storage.sync.set({group: group, enterprise: enterprise});
-                },
-                fail: function(xhr, textStatus, errorThrown){
-                  console.log('request to get group failed');
-                }
-              });
+            console.log(message.ticket)
+              if(message.ticket.length == 7){
+                ticketUrl = 'https://support3.telesphere.com/admin.php?pg=request&reqid=' + message.ticket
+                $.ajax({
+                  url: ticketUrl,
+                  contentType: 'text/html; charset=UTF-8',
+                  dataType: "text", //was text
+                  crossDomain: true,
+                  success: function(data){
+                    var phoneNum = $(data).find("#sPhone")[0].value;
+                    chrome.storage.sync.set({phoneNumber: phoneNum});
+                  },
+                  fail: function(xhr, textStatus, errorThrown){
+                    console.log('request to get phone number failed');
+                  }
+                });
+                $.ajax({
+                  url: 'https://zeus.telesphere.com/ticket/viewHS/ticket_id:' + message.ticket,
+                  contentType: 'text/html; charset=UTF-8',
+                  dataType: "text", //was text
+                  crossDomain: true,
+                  success: function(data){
+                    var group = $(data).find("#customer_info > div:nth-child(1) > div:nth-child(4) > p > a")[0].textContent.trim()
+                    var enterprise = $(data).find("#customer_info > div:nth-child(1) > div:nth-child(3) > p > a")[0].textContent.trim()
+                    chrome.storage.sync.set({group: group, enterprise: enterprise});
+                  },
+                  fail: function(xhr, textStatus, errorThrown){
+                    console.log('request to get group failed');
+                  }
+                });
+              }else{
+                console.log("Did not query for Group, Enterprise, or Phone Number because invalid ticket");
+              }
+
               break;
           default:
 
