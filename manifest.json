@@ -39,6 +39,19 @@
             },
             {
               "all_frames" : true,
+              "matches": ["http://myavoice.telesphere.com/*","https://myavoice.telesphere.com/*"],
+              "js": ["js/jquery/jquery-3.3.1.min.js", "bwtooltest.js"],
+              "run_at" : "document_end"
+            },
+            {
+              "all_frames" : true,
+              "matches": ["https://zeus.telesphere.com/tn/search/search:*"],
+              "js": ["js/jquery/jquery-3.3.1.min.js", "js/zeus/bwlinkfixer.js"],
+              "run_at" : "document_end"
+            },
+
+            {
+              "all_frames" : true,
               "matches": ["https://support3.telesphere.com/admin.php?pg=request&reqid=*"],
               "js": ["js/jquery/jquery-3.3.1.min.js", "js/helpspot/templates.js"],
               "run_at" : "document_end",

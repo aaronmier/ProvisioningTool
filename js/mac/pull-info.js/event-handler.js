@@ -61,7 +61,7 @@ services = [];
 function getTicket(){
     ticket = $("#quote\\[description\\]").val().replace(/\D/g,'')
     test = ticket.substring(0, 2);
-    if((test==11){
+    if(test==11){
         ticket = ticket.substring(0, 7);
         if(ticket.length !== 7){
           ticket = "No ticket in Notes"

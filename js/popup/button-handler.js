@@ -83,7 +83,7 @@ $("#assignTo").change(function () {
    });
 $("#copyTracking").click(function () {
  copyText = document.createElement("textarea");
- copyText.value = 'Fedex.com/' + $("#trackingNum").val()
+ copyText.value = '=HYPERLINK("https://www.fedex.com/apps/fedextrack/?action=track&ascend_header=1&clienttype=dotcom&cntry_code=us&language=english&tracknumbers=' + $("#trackingNum").val() +`","Tracking: ` + $("#trackingNum").val() + `")`
  copyText.style.position = 'fixed';
  copyText.style.top = 0;
  copyText.style.left = 0;
